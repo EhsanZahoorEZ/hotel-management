@@ -15,6 +15,7 @@ const Home = async () => {
       <FeaturedRoom featuredRoom={featuredRoom} />
       <Gallery />
       <NewsLetter />
+
     </>
   );
 };

@@ -105,6 +105,7 @@ const UserDetails = (props: { params: { id: string } }) => {
             />
           </div>
           <div className='font-normal py-4 text-left'>
+            {/*  */}
             <h6 className='text-xl font-bold pb-3'>About</h6>
             <p className='text-sm'>{userData.about ?? ''}</p>
           </div>
@@ -122,6 +123,7 @@ const UserDetails = (props: { params: { id: string } }) => {
 
         <div className='md:col-span-8 lg:col-span-9'>
           <div className='flex items-center'>
+            {/*  */}
             <h5 className='text-2xl font-bold mr-3'>Hello, {userData.name}</h5>
           </div>
           <div className='md:hidden w-14 h-14 rounded-l-full overflow-hidden'>

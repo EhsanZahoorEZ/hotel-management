@@ -115,11 +115,11 @@ const RoomDetails = (props: { params: { slug: string } }) => {
                 ))}
               </div>
               <div className='mb-11'>
-                <h2 className='font-bold text-3xl mb-2'>Description</h2>
+                <h2 className='font-bold text-3xl mb-2 font-serif'>Description</h2>
                 <p>{room.description}</p>
               </div>
               <div className='mb-11'>
-                <h2 className='font-bold text-3xl mb-2'>Offered Amenities</h2>
+                <h2 className='font-bold text-3xl mb-2 font-serif'>Offered Amenities</h2>
                 <div className='grid grid-cols-2'>
                   {room.offeredAmenities.map(amenity => (
                     <div
@@ -135,15 +135,15 @@ const RoomDetails = (props: { params: { slug: string } }) => {
                 </div>
               </div>
               <div className='mb-11'>
-                <h2 className='font-bold text-3xl mb-2'>Safety And Hygiene</h2>
+                <h2 className='font-bold text-3xl mb-2 font-serif'>Safety And Hygiene</h2>
                 <div className='grid grid-cols-2'>
                   <div className='flex items-center my-1 md:my-0'>
                     <MdOutlineCleaningServices />
-                    <p className='ml-2 md:text-base text-xs'>Daily Cleaning</p>
+                    <p className='ml-2 md:text-base text-xs font-serif'>Daily Cleaning</p>
                   </div>
                   <div className='flex items-center my-1 md:my-0'>
                     <LiaFireExtinguisherSolid />
-                    <p className='ml-2 md:text-base text-xs'>
+                    <p className='ml-2 md:text-base text-xs font-serif'>
                       Fire Extinguishers
                     </p>
                   </div>
@@ -160,9 +160,9 @@ const RoomDetails = (props: { params: { slug: string } }) => {
                 </div>
               </div>
 
-              <div className='shadow dark:shadow-white rounded-lg p-6'>
+              <div className='shadow dark:shadow-white border-4 border-gray-300 border-t border-r  rounded-lg p-6 border-spacing-3'>
                 <div className='items-center mb-4'>
-                  <p className='md:text-lg font-semibold'>Customer Reviews</p>
+                  <p className='md:text-lg font-semibold font-serif'>Customer Reviews</p>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                   <RoomReview roomId={room._id} />
@@ -171,8 +171,8 @@ const RoomDetails = (props: { params: { slug: string } }) => {
             </div>
           </div>
 
-          <div className='md:col-span-4 rounded-xl shadow-lg dark:shadow dark:shadow-white sticky top-10 h-fit overflow-auto'>
-            <BookRoomCta
+          <div className='md:col-span-4 rounded-xl shadow-lg dark:shadow dark:shadow-white border-4 border-gray-300 border-t border-r sticky top-10 h-fit overflow-auto'>
+            <BookRoomCta 
               discount={room.discount}
               price={room.price}
               specialNote={room.specialNote}

@@ -31,8 +31,8 @@ const Search: FC<Props> = ({
   };
 
   return (
-    <section className='bg-tertiary-light px-4 py-6 rounded-lg'>
-      <div className='container mx-auto flex gap-4 flex-wrap justify-between items-center'>
+    <section className='bg-tertiary-light px-auto py-4 rounded-lg border-4 mx-3 border-gray-300 border-t border-r'>
+      <div className='container mx-auto flex px-4 gap-4 flex-wrap justify-between items-center'>
         <div className='w-full md:1/3 lg:w-auto mb-4 md:mb-0'>
           <label className='block text-sm font-medium mb-2 text-black'>
             Room Type
@@ -46,13 +46,14 @@ const Search: FC<Props> = ({
               <option value='All'>All</option>
               <option value='Basic'>Basic</option>
               <option value='Luxury'>Luxury</option>
-              <option value='Suite'>Suite</option>
+              <option value='Suite'>Superior</option>
+              <option value='Suite'>More Coming soon</option>
             </select>
           </div>
         </div>
 
         <div className='w-full md:1/3 lg:w-auto mb-4 md:mb-0'>
-          <label className='block text-sm font-medium mb-2 text-black'>
+          <label className='block text-sm font-medium mb-2 text-black  '>
             Search
           </label>
           <input
@@ -66,7 +67,7 @@ const Search: FC<Props> = ({
         </div>
 
         <button
-          className='btn-primary'
+          className='btn-primary font-serif border-4 border-gray-300 border-t border-r'
           type='button'
           onClick={handleFilterClick}
         >

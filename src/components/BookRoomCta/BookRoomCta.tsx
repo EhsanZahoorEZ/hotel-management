@@ -59,7 +59,7 @@ const BookRoomCta: FC<Props> = props => {
         {discount ? (
           <span className='font-bold text-xl'>
             {' '}
-            | discount {discount}%. Now{' '}
+            | discount {discount}% Now{' '}
             <span className='text-tertiary-dark'>$ {discountPrice}</span>
           </span>
         ) : (

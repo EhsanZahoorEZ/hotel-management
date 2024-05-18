@@ -9,7 +9,6 @@ import {
 } from 'chart.js';
 import { FC } from 'react';
 import { Bar } from 'react-chartjs-2';
-
 import { Booking } from '@/models/booking';
 
 ChartJS.register(Tooltip, CategoryScale, LinearScale, BarElement);

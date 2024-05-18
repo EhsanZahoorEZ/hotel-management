@@ -25,3 +25,44 @@
 .font-normal {
   @apply text-sm md:text-base;
 }
+.rotate-animation {
+  animation: rotateBorder 5s linear infinite; /* Apply the animation to rotateBorder */
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate 360 degrees */
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-flash {
+  animation: flash 2s ease-in-out infinite;
+}

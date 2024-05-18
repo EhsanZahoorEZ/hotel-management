@@ -62,7 +62,7 @@ const Auth = () => {
     <section className='container mx-auto'>
       <div className='p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto'>
         <div className='flex mb-8 flex-col md:flex-row items-center justify-between'>
-          <h1 className='text-xl font-bold leading-tight tracking-tight md:text-2xl'>
+          <h1 className='text-2xl font-bold leading-tight tracking-tight md:text-2xl'>
             Create an account
           </h1>
           <p>OR</p>
@@ -111,13 +111,14 @@ const Auth = () => {
 
           <button
             type='submit'
-            className='w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center'
+            className='w-full bg-tertiary-dark focus:outline-none font-serif rounded-lg border-4 border-gray-300   text-sm px-5 py-2.5 font-extrabold text-center'
           >
             Sign Up
           </button>
         </form>
 
-        <button onClick={loginHandler} className='text-blue-700 underline'>
+        <button onClick={loginHandler} className='w-full flex justify-center bg-green-600 font-serif font-extrabold
+         border-2 border-gray-300 focus:outline-none  rounded-lg text-sm px-5 py-2.5  text-blue-600 text-center underline '>
           login
         </button>
       </div>

@@ -41,20 +41,20 @@ const FeaturedRoom: FC<Props> = props => {
       </div>
 
       <div className='md:py-10 md:w-1/2 text-left'>
-        <h3 className='font-heading mb-12'>Featured Room</h3>
+        <h3 className='font-heading mb-12 font-serif'>Featured Room</h3>
 
         <p className='font-normal max-w-md'>{featuredRoom.description}</p>
 
         <div className='flex flex-col md:flex-row md:items-end justify-between mt-5'>
           <div className='flex mb-3 md:mb-0'>
             <div className='flex gap-3 flex-col items-center justify-center mr-4'>
-              <p className='text-xs lg:text-xl text-center'>Start From</p>
+              <p className='text-xs lg:text-xl text-center font-serif'>Start From</p>
               <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>
                 $ {featuredRoom.price}
               </p>
             </div>
             <div className='flex gap-3 flex-col items-center justify-center mr-4'>
-              <p className='text-xs lg:text-xl text-center'>Discount</p>
+              <p className='text-xs lg:text-xl text-center font-serif' >Discount</p>
               <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>
                 $ {featuredRoom.discount}
               </p>
@@ -63,7 +63,7 @@ const FeaturedRoom: FC<Props> = props => {
 
           <Link
             href={`/rooms/${featuredRoom.slug.current}`}
-            className='border h-fit text-center border-tertiary-dark text-tertiary-dark px-3 py-2 lg:py-5 lg:px-7 rounded-2xl font-bold lg:text-xl'
+            className='border-4 h-fit text-center border-t border-r border-tertiary-dark text-tertiary-dark px-3 py-2 lg:py-5 lg:px-7 rounded-2xl font-bold lg:text-xl'
           >
             More Details
           </Link>
