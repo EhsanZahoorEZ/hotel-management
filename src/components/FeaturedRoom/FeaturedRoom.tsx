@@ -50,13 +50,14 @@ const FeaturedRoom: FC<Props> = props => {
             <div className='flex gap-3 flex-col items-center justify-center mr-4'>
               <p className='text-xs lg:text-xl text-center font-serif'>Start From</p>
               <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>
-                $ {featuredRoom.price}
+              <span className='font-bold text-xs'> PKR</span> {featuredRoom.price}
               </p>
             </div>
             <div className='flex gap-3 flex-col items-center justify-center mr-4'>
               <p className='text-xs lg:text-xl text-center font-serif' >Discount</p>
               <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>
-                $ {featuredRoom.discount}
+               {/* <span className='font-bold text-xs'>PKR</span>  */}
+                {featuredRoom.discount}  <span className='font-bold text-xs'>percent</span> 
               </p>
             </div>
           </div>
