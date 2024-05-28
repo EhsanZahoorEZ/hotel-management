@@ -19,8 +19,7 @@ const Header = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  // font-black font-serif text-4xl  text-tertiary-dark 
-
+ 
   return (
     <header className='py-8 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap items-center justify-between'>
       <div className='flex items-center w-full md:2/3'>
@@ -93,7 +92,7 @@ const Header = () => {
           <Link className='font-bold border   rounded-md text-tertiary-dark px-3  ' href='/rooms'>Rooms</Link>
         </li>
         <li className='hover:-translate-y-2 duration-500 transition-all '>
-          <Link className='font-bold border   rounded-md text-tertiary-dark px-1  ' href='/'>Contact</Link>
+          <Link className='font-bold border   rounded-md text-tertiary-dark px-3 ' href='/Menu'>Menu</Link>
         </li>
       </ul>
     </header>
