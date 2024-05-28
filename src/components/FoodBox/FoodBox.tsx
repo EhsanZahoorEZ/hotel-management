@@ -108,7 +108,7 @@ const FoodMenu: React.FC = () => {
     return (
         <div className="container mx-auto p-4">
             <h1 className='text-center font-bold text-tertiary-dark font-serif'>Welcome to Our Hotel Management and  Delicious Delight!</h1>
-            <p className="mb-8 text-center text-sm">Experience the vibrant flavors of Asia with our expertly crafted dishes that blend traditional techniques with modern twists. Enjoy sushi, stir-fries, and more in a contemporary setting..</p>
+            <p className="mb-8 text-center text-sm">Experience the vibrant flavors of Asia with our expertly crafted dishes that blend traditional techniques with modern twists. Enjoy sushi, stir-fries, and more in a contemporary setting.</p>
 
             {/*  */}
             <ul className='flex items-center justify-between mx-96 my-10 '>
@@ -127,9 +127,9 @@ const FoodMenu: React.FC = () => {
             </ul>
             <h1 className="text-2xl font-bold mb-8 text-center">Our Menu For BreakFast</h1>
             {/*  */}
-            <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
                 {foodItems.map((item) => (
-                    <div key={item.id} className="border p-4 rounded-lg shadow-lg">
+                    <div key={item.id} className="border p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:-translate-y-2">
                         <img src={item.imageUrl} alt={item.name} className="w-full h-48 object-cover rounded-t-lg" />
                         <div className="p-4">
                             <h2 className="text-1xl font-semibold mb-2">{item.name}</h2>
@@ -145,7 +145,7 @@ const FoodMenu: React.FC = () => {
             <h1 className="text-2xl font-bold my-5 text-center ">Our Menu For Lunch</h1>
             <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {LunchItems.map((item) => (
-                    <div key={item.id} className="border p-4 rounded-lg shadow-lg">
+                    <div key={item.id} className="border p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:-translate-y-2">
                         <img src={item.imageUrl} alt={item.name} className="w-full h-48 object-cover rounded-t-lg" />
                         <div className="p-4">
                             <h2 className="text-1xl font-semibold mb-2">{item.name}</h2>
@@ -158,10 +158,13 @@ const FoodMenu: React.FC = () => {
                 ))}
             </div>
             {/*  */}
-            <h1 className="text-2xl font-bold my-5 text-center ">Our Menu For Dinner</h1>
+       
+
+            <h1 className="text-2xl font-bold my-5 text-center For-Dinner">Our Menu For Dinner</h1>
+       
             <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {DinnerItems.map((item) => (
-                    <div key={item.id} className="border p-4 rounded-lg shadow-lg">
+                    <div key={item.id} className="border p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:-translate-y-2">
                         <img src={item.imageUrl} alt={item.name} className="w-full h-48 object-cover rounded-t-lg" />
                         <div className="p-4">
                             <h2 className="text-1xl font-semibold mb-2">{item.name}</h2>

@@ -63,7 +63,7 @@ function About() {
             <div className='rounded-2xl overflow-hidden h-96'>
               <Image
                 alt='gallery'
-                className='img'
+                className='img scale-animation'
                 src='/images/hero-12.jpeg'
                 width={200}
                 height={200}
@@ -73,7 +73,7 @@ function About() {
           </div>
           <div className="w-full md:w-5/12 mt-5">
             <p className='font-black font-serif text-4xl '>
-              Our Menu
+             Hotel Menu
             </p>
             <div className=" mt-5 w-auto">
                 <h2 className='font-bold font-serif text-2xl text-tertiary-dark '>Ez Hotelzz </h2>
@@ -105,7 +105,6 @@ function About() {
                         {/*  */}
                         <div className=" shadow-md rounded-lg p-4 border-gray-300 border-4 border-l border-t w-full md:w-64 h-56 scale-animation">
                         <Link  href='/Menu'>
-
                         <FaClock className='hover:-translate-y-2 text-yellow-500 text-6xl mx-auto mb-4 ' />
                         </Link>
                         <h2 className="text-xl font-bold mb-4 text-center">Opening Hours</h2>
