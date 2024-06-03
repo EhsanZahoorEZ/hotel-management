@@ -124,7 +124,7 @@ const FoodPage: React.FC = () => {
         // After handling the submission, close the modal
         setIsModalOpen(false);
     };
-   
+
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-center font-bold text-tertiary-dark font-serif text-2xl md:text-3xl lg:text-4xl">Welcome to Our Hotel Management and Delicious Delight!</h1>
@@ -145,8 +145,8 @@ const FoodPage: React.FC = () => {
                     <Link className="font-bold border rounded-md px-3 py-1 sm:px-5 sm:py-2" href='/'>Dinner</Link>
                 </li>
             </ul>
-            <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleFormSubmit} />
-            
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={() => setIsModalOpen(false)} />
+
             {/* Menu for BreakFast */}
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">Our Menu For BreakFast</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -157,8 +157,8 @@ const FoodPage: React.FC = () => {
                             <h2 className="text-lg font-semibold mb-2">{item.name}</h2>
                             <p className="text-gray-700 mb-2">{item.description}</p>
                             <p className="text-lg font-bold">{item.price}</p>
-                            <button onClick={handleOrderNow} className="bg-orange-400 text-white hover:scale-110 duration-400 border-4 border-gray-300 transition-all shadow-primary text-lg font-serif font-extrabold rounded-xl flex justify-center items-center py-2 px-4 md:px-6 lg:px-8" >Order Now</button>                           
-                        </div>                      
+                            <button onClick={handleOrderNow} className="bg-orange-400 text-white hover:scale-110 duration-400 border-4 border-gray-300 transition-all shadow-primary text-lg font-serif font-extrabold rounded-xl flex justify-center items-center py-2 px-4 md:px-6 lg:px-8" >Order Now</button>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -174,7 +174,7 @@ const FoodPage: React.FC = () => {
                             <p className="text-gray-700 mb-2">{item.description}</p>
                             <p className="text-lg font-bold">{item.price}</p>
                             <button onClick={handleOrderNow} className="bg-orange-400 text-white hover:scale-110 duration-400 border-4 border-gray-300 transition-all shadow-primary text-lg font-serif font-extrabold rounded-xl flex justify-center items-center py-2 px-4 md:px-6 lg:px-8" >Order Now</button>
-                             </div>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -190,8 +190,8 @@ const FoodPage: React.FC = () => {
                             <p className="text-gray-700 mb-2">{item.description}</p>
                             <p className="text-lg font-bold">{item.price}</p>
                             <button onClick={handleOrderNow} className="bg-orange-400 text-white hover:scale-110 duration-400 border-4 border-gray-300 transition-all shadow-primary text-lg font-serif font-extrabold rounded-xl flex justify-center items-center py-2 px-4 md:px-6 lg:px-8" >Order Now</button>
- 
-                             </div>
+
+                        </div>
                     </div>
                 ))}
             </div>
