@@ -34,7 +34,7 @@ const Table: FC<Props> = ({ bookingDetails, setRoomId, toggleRatingModal }) => {
             <td className='px-6 py-2'> 5%</td>
             <td className='px-6 py-2'> 3 dsays</td>
             <td className='px-6 py-2'> 1</td>
-            <td><button className=''>Delete</button></td>
+            <td><button className='border-2 bg-green-500 text-yellow-400 py-1 px-2'>Delete</button></td>
 
           </tr>
         </thead>

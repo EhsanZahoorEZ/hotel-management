@@ -115,7 +115,7 @@ const UserDetails = (props: { params: { id: string } }) => {
           <div className='flex items-center'>
             <p onClick={() => signOut({ callbackUrl: '/' })} className='w-full mr-2 px-6 py-2
              bg-yellow-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none
-              focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-150'>Sign Out </p>
+              focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-150 text-center'>Sign Out </p>
 
           </div>
 
