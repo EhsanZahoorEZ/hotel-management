@@ -8,14 +8,18 @@ import { signIn, useSession } from 'next-auth/react';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
-const defaultFormData = {
-  email: '',
-  name: '',
-  password: '',
-};
 
 const Auth = () => {
+
+  const defaultFormData = {
+    email: '',
+    name: '',
+    password: '',
+  };
+
+  console.log("Login data", defaultFormData);
   const [formData, setFormData] = useState(defaultFormData);
+  console.log("formData", formData);
 
   const inputStyles =
     'border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none';
@@ -26,6 +30,7 @@ const Auth = () => {
   };
 
   const { data: session } = useSession();
+
   const router = useRouter();
 
   useEffect(() => {
@@ -41,6 +46,8 @@ const Auth = () => {
       toast.error("Something wen't wrong");
     }
   };
+
+
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -60,7 +67,7 @@ const Auth = () => {
 
   return (
     <section className='container mx-auto'>
-        <h1 className=' text-tertiary-dark text-3xl font-extrabold  focus:outline-none font-serif flex items-center justify-center '>Wellcome! Book Your Perfect Room</h1>
+      <h1 className=' text-tertiary-dark text-3xl font-extrabold  focus:outline-none font-serif flex items-center justify-center '>Wellcome! Book Your Perfect Room</h1>
       <div className='p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto'>
         <div className='flex mb-8 flex-col md:flex-row items-center justify-between'>
           <h1 className='text-2xl font-bold leading-tight tracking-tight md:text-2xl'>

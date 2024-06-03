@@ -113,11 +113,13 @@ const UserDetails = (props: { params: { id: string } }) => {
             {/* <h6 className='text-xl font-bold pb-3'>{userData.name}</h6> */}
           </div>
           <div className='flex items-center'>
-            <p onClick={() => signOut({ callbackUrl: '/' })} className='mr-2 px-6 py-2 bg-yellow-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-150'>Sign Out</p>
-            <FaSignOutAlt
-              className='text-3xl cursor-pointer text-yellow-500 hover:text-blue-600'
-              onClick={() => signOut({ callbackUrl: '/' })}
-            />
+            <p onClick={() => signOut({ callbackUrl: '/' })} className='mr-2 px-6 py-2
+             bg-yellow-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none
+              focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-150'>Sign Out <FaSignOutAlt
+                className='text-3xl cursor-pointer text-yellow-500 hover:text-blue-600'
+              // onClick={() => signOut({ callbackUrl: '/' })}
+              /></p>
+
           </div>
         </div>
 
@@ -143,7 +145,7 @@ const UserDetails = (props: { params: { id: string } }) => {
             Joined In {userData._createdAt.split('T')[0]}
           </p>
           <div className='md:hidden flex items-center my-2'>
-            <p className='mr-2'  onClick={() => signOut({ callbackUrl: '/' })}>Sign out</p>
+            <p className='mr-2' onClick={() => signOut({ callbackUrl: '/' })}>Sign out</p>
             {/* <FaSignOutAlt
               className='text-3xl cursor-pointer'
              
@@ -152,9 +154,8 @@ const UserDetails = (props: { params: { id: string } }) => {
 
           <nav className='sticky top-0 px-2 w-fit mx-auto md:w-full md:px-5 py-3 mb-8 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mt-7'>
             <ol
-              className={`${
-                currentNav === 'bookings' ? 'text-blue-600' : 'text-gray-700'
-              } inline-flex mr-1 md:mr-5 items-center space-x-1 md:space-x-3`}
+              className={`${currentNav === 'bookings' ? 'text-blue-600' : 'text-gray-700'
+                } inline-flex mr-1 md:mr-5 items-center space-x-1 md:space-x-3`}
             >
               <li
                 onClick={() => setCurrentNav('bookings')}
@@ -167,9 +168,8 @@ const UserDetails = (props: { params: { id: string } }) => {
               </li>
             </ol>
             <ol
-              className={`${
-                currentNav === 'amount' ? 'text-blue-600' : 'text-gray-700'
-              } inline-flex mr-1 md:mr-5 items-center space-x-1 md:space-x-3`}
+              className={`${currentNav === 'amount' ? 'text-blue-600' : 'text-gray-700'
+                } inline-flex mr-1 md:mr-5 items-center space-x-1 md:space-x-3`}
             >
               <li
                 onClick={() => setCurrentNav('amount')}
