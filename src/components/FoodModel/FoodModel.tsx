@@ -1,5 +1,6 @@
 // components/Modal.tsx
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 interface ModalProps {
@@ -135,12 +136,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                                 required
                             />
                         </div>
-                        <button
+                        <Link href='/TableForFood'
                             type="submit"
                             className="bg-green-700 rounded-1xl hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Submit
-                        </button>
+                        </Link>
                     </div>
                 </form>
             </div>
