@@ -43,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
         }, {} as Record<string, string>);
 
         router.push({
-            pathname: '/TableForFood',
+            pathname: '/TableFood',
             query,
         });
     };
