@@ -37,6 +37,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
         e.preventDefault();
         onSubmit(formData);
     };
+    
 
     if (!isOpen) return null;
 
