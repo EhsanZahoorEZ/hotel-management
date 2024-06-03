@@ -72,7 +72,7 @@ export async function POST(req: Request, res: Response) {
         },
       ],
       payment_method_types: ['card'],
-      success_url: `Pkr{origin}/users/${userId}`,
+      success_url: `pkr{origin}/users/pkr{userId}`,
       metadata: {
         adults,
         checkinDate: formattedCheckinDate,
