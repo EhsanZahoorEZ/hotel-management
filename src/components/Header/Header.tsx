@@ -86,8 +86,6 @@ const Header = () => {
     </div>
 
     {/* Toggle Button */}
-  
-
     {/* Navigation Links */}
     <ul
         className={`flex flex-col md:flex-row md:flex items-center justify-between w-full md:w-2/4 mt-4 md:mt-0 space-y-2 md:space-y-0 ${menuOpen ? 'flex-row' : 'hidden md:flex  '}`}

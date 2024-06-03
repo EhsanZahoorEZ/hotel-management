@@ -67,6 +67,8 @@ const Table: FC<Props> = ({ bookingDetails, setRoomId, toggleRatingModal }) => {
                   Rate
                 </button>
               </td>
+              {/*  */}
+              <td className='font-medium text-blue-600 hover:underline'><button>Delete</button></td>
             </tr>
           ))}
         </tbody>
