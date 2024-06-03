@@ -2,6 +2,12 @@ import { useRouter } from 'next/router';
 
 const TableFood = () => {
     const router = useRouter();
+
+    // Ensure the router is ready before accessing query parameters
+    if (!router.isReady) {
+        return <div>Loading...</div>;
+    }
+
     const { itemName, name, email, location, address, phoneNumber } = router.query;
 
     return (

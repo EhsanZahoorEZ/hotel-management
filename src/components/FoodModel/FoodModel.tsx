@@ -145,7 +145,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                             />
                         </div>
                         <button
-                            type="submit"
+                             type="submit"
                             className="bg-green-700 rounded-1xl hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Submit
