@@ -62,7 +62,7 @@ export async function POST(req: Request, res: Response) {
         {
           quantity: 1,
           price_data: {
-            currency: 'usd',
+            currency: 'pkr',
             product_data: {
               name: room.name,
               images: room.images.map(image => image.url),
@@ -72,7 +72,7 @@ export async function POST(req: Request, res: Response) {
         },
       ],
       payment_method_types: ['card'],
-      success_url: `${origin}/users/${userId}`,
+      success_url: `$pkr{origin}/users/pkr{userId}`,
       metadata: {
         adults,
         checkinDate: formattedCheckinDate,
