@@ -75,35 +75,39 @@ const Header = () => {
             />
           )}
         </li>
-      </ul>
-    </div>
-
-    {/* Toggle Button */}
-    <button
-        className='md:hidden block text-tertiary-dark ml-auto items-end justify-end'
+        <button
+        className='md:hidden block text-tertiary-dark ml-auto'
         onClick={() => setMenuOpen(!menuOpen)}
       >
         ☰
       </button>
+      </ul>
+    
+    </div>
+
+    {/* Toggle Button */}
+  
 
     {/* Navigation Links */}
-    <ul className={`flex-col md:flex-row md:flex items-center justify-between w-full md:w-2/4 mt-4 md:mt-0 ${menuOpen ? 'flex' : 'hidden'}`}>
-      <li className='hover:-translate-y-2 duration-500 transition-all'>
-        <Link className='font-bold border rounded-md text-tertiary-dark px-4' href='/'>Home</Link>
-      </li>
-      <li className='hover:-translate-y-2 duration-500 transition-all'>
-        <Link className='font-bold border rounded-md text-tertiary-dark px-4' href='/About'>About</Link>
-      </li>
-      <li className='hover:-translate-y-2 duration-500 transition-all'>
-        <Link className='font-bold border rounded-md text-tertiary-dark px-3' href='/rooms'>Rooms</Link>
-      </li>
-      <li className='hover:-translate-y-2 duration-500 transition-all'>
-        <Link className='font-bold border rounded-md text-tertiary-dark px-3' href='/Menu'>Menu</Link>
-      </li>
-      <li className='hover:-translate-y-2 duration-500 transition-all'>
-        <Link className='font-bold border rounded-md text-tertiary-dark px-3' href='/rooms'>Contact</Link>
-      </li>
-    </ul>
+    <ul
+        className={`flex flex-col md:flex-row md:flex items-center justify-between w-full md:w-2/4 mt-4 md:mt-0 space-y-2 md:space-y-0 ${menuOpen ? 'flex-row' : 'hidden md:flex  '}`}
+      >
+        <li className='hover:-translate-y-2 duration-500 transition-all'>
+          <Link className='font-bold border rounded-md text-tertiary-dark px-4 py-2' href='/'>Home</Link>
+        </li>
+        <li className='hover:-translate-y-2 duration-500 transition-all'>
+          <Link className='font-bold border rounded-md text-tertiary-dark px-4 py-2' href='/About'>About</Link>
+        </li>
+        <li className='hover:-translate-y-2 duration-500 transition-all'>
+          <Link className='font-bold border rounded-md text-tertiary-dark px-4 py-2' href='/rooms'>Rooms</Link>
+        </li>
+        <li className='hover:-translate-y-2 duration-500 transition-all'>
+          <Link className='font-bold border rounded-md text-tertiary-dark px-4 py-2' href='/Menu'>Menu</Link>
+        </li>
+        <li className='hover:-translate-y-2 duration-500 transition-all'>
+          <Link className='font-bold border rounded-md text-tertiary-dark px-4 py-2' href='/rooms'>Contact</Link>
+        </li>
+      </ul>
   </header>
   );
 };
