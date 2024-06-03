@@ -107,7 +107,7 @@ const UserDetails = (props: { params: { id: string } }) => {
           <div className='font-normal py-4 text-left'>
             {/*  */}
             <h6 className='text-xl font-bold text-yellow-500 hover:text-blue-600 pb-3'>About</h6>
-            <p className='text-sm font-bold '>{userData.about ?? ''}Hey! Im ehsan zahoor i am owner of this website. Please visit and book your perfect and comfort room</p>
+            <p className='text-sm font-bold '>{userData.about ?? ''}Hey! Im {userData.name} i am owner of this website. Please visit and book your perfect and comfort room</p>
           </div>
           <div className='font-normal text-left'>
             {/* <h6 className='text-xl font-bold pb-3'>{userData.name}</h6> */}
@@ -143,11 +143,11 @@ const UserDetails = (props: { params: { id: string } }) => {
             Joined In {userData._createdAt.split('T')[0]}
           </p>
           <div className='md:hidden flex items-center my-2'>
-            <p className='mr-2'>Sign out</p>
-            <FaSignOutAlt
+            <p className='mr-2'  onClick={() => signOut({ callbackUrl: '/' })}>Sign out</p>
+            {/* <FaSignOutAlt
               className='text-3xl cursor-pointer'
-              onClick={() => signOut({ callbackUrl: '/' })}
-            />
+             
+            /> */}
           </div>
 
           <nav className='sticky top-0 px-2 w-fit mx-auto md:w-full md:px-5 py-3 mb-8 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mt-7'>
