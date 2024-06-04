@@ -86,7 +86,7 @@ const Table: FC<Props> = ({ bookingDetails,  setRoomId, toggleRatingModal }) => 
       </table>
       {/*  */}
       {/*  */}
-      <h1>For Food Detail</h1>
+      <h1 className='font-serif text-yellow-400 font-bold mt-2'>For Food Detail</h1>
       <table className='w-full text-sm text-left text-gray-500 border-gray-300 border-4 border-t border-r'>
         <thead className='text-xs text-gray-700 uppercase bg-gray-50'>
           <tr>
