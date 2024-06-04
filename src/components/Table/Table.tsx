@@ -85,33 +85,65 @@ const Table: FC<Props> = ({ bookingDetails,  setRoomId, toggleRatingModal }) => 
         </tbody>
       </table>
       {/*  */}
-      <div>
-            <h1 className=''>For Food Detail</h1>
-            <table className='w-full text-sm text-left text-gray-500 border-gray-300 border-4 border-t border-r'>
-                {/* Table headers */}
-                <thead className='text-xs text-gray-700 uppercase bg-gray-50'>
-                    {/* Header row */}
-                </thead>
-                <tbody>
-                    {displayedBookings.map(booking => (
-                        <tr
-                            key={booking._id}
-                            className='bg-white border-b hover:bg-gray-50'
-                        >
-                            {/* Booking data rows */}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            {/* Pagination */}
-            <div>
-                <button onClick={() => handlePageChange(currentPage - 1)}>Previous</button>
-                {Array.from(Array(totalPages), (val, index) => (
-                    <button key={index} onClick={() => handlePageChange(index)}>{index + 1}</button>
-                ))}
-                <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
-            </div>
-        </div>
+      {/*  */}
+      <h1>For Food Detail</h1>
+      <table className='w-full text-sm text-left text-gray-500 border-gray-300 border-4 border-t border-r'>
+        <thead className='text-xs text-gray-700 uppercase bg-gray-50'>
+          <tr>
+            <th className='px-6 py-3 font-extrabold font-serif'>Name</th>
+            <th className='px-6 py-3 font-extrabold font-serif'>Phone Number</th>
+            <th className='px-6 py-3 font-extrabold font-serif'>Email</th>
+            <th className='px-6 py-3'>Address</th>
+            <th className='px-6 py-3 font-extrabold font-serif'>Location</th>
+            
+          </tr>
+          <tr>
+            <td className='px-6 py-2'> John</td>
+            <td className='px-6 py-2'> ********</td>
+            <td className='px-6 py-2'>John@123gmail.com</td>
+            <td className='px-6 py-2'> Kpk</td>
+            <td className='px-6 py-2'> Haripur</td>            
+            <td><button className='border-2 bg-green-500 text-yellow-400 py-1 px-2'>Delete</button></td>
+
+          </tr>
+        </thead>
+        <tbody>
+          {bookingDetails.map(booking => (
+            <tr
+              key={booking._id}
+              className='bg-white border-b hover:bg-gray-50'
+            >
+              <th
+                onClick={() =>
+                  router.push(`/rooms/${booking.hotelRoom.slug.current}`)
+                }
+                className='px-6 underline text-blue-600 cursor-pointer py-4 font-medium whitespace-nowrap'
+              >
+                {booking.hotelRoom.name}
+              </th>
+              <td className='px-6 py-4'></td>
+              <td className='px-6 py-4'></td>
+              <td className='px-6 py-4'></td>
+              <td className='px-6 py-4'></td>
+              <td className='px-6 py-4'></td>
+              <td className='px-6 py-4'>
+                <button
+                  onClick={() => {
+                    setRoomId(booking.hotelRoom._id);
+                    toggleRatingModal()
+                  }}
+                  className='font-medium text-blue-600 hover:underline'
+                >
+                  Delete
+                </button>
+              </td>
+              {/*  */}
+             
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      
     
     </div>
   );
