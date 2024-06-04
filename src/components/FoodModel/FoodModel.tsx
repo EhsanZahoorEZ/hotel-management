@@ -1,9 +1,12 @@
-// components/Modal.tsx
-
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import React, { useState } from 'react';
 
-interface ModalProps {
+// interface ModalProps {
+//     isOpen: boolean;
+//     onClose: () => void;
+//     onSubmit: (formData: FormData) => void;
+// }
+export interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     onSubmit: (formData: FormData) => void;
@@ -27,7 +30,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
         address: '',
         phoneNumber: ''
     });
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -36,6 +38,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onSubmit(formData);
+
+        // const query = Object.fromEntries(Object.entries(formData).map(([key, value]) => [key, String(value)]));
+
+        
     };
 
     if (!isOpen) return null;
@@ -49,10 +55,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                 >
                     &times;
                 </button>
-                <h2 className="text-lg font-bold text-tertiary-dark mb-2 ">Enter Your Food Details</h2>
+                <h2 className="text-lg font-bold text-tertiary-dark mb-2">Enter Your Food Details</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemName">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemName">
                             Item Name
                         </label>
                         <input
@@ -61,7 +67,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                             name="itemName"
                             value={formData.itemName}
                             onChange={handleChange}
-                            className="appearance-none   shadow-lg border-gray-500 border-2 border-r border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="appearance-none shadow-lg border-gray-500 border-2 border-r border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                         <div className="flex justify-between my-2">
@@ -75,12 +81,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="appearance-none  shadow-lg border-gray-500 border-2 border-r border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    className="appearance-none shadow-lg border-gray-500 border-2 border-r border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     required
                                 />
                             </div>
                             <div className="w-1/2 pl-2">
-                                <label className="block text-gray-700  text-sm font-bold mb-2" htmlFor="email">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                                     Email
                                 </label>
                                 <input
@@ -89,7 +95,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="appearance-none  rounded  shadow-lg border-gray-500 border-2 border-r border-t w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    className="appearance-none rounded shadow-lg border-gray-500 border-2 border-r border-t w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     required
                                 />
                             </div>
@@ -104,7 +110,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                                 name="location"
                                 value={formData.location}
                                 onChange={handleChange}
-                                className="appearance-none  shadow-lg border-gray-500 border-2  border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none shadow-lg border-gray-500 border-2 border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 required
                             />
                         </div>
@@ -118,7 +124,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                                 name="address"
                                 value={formData.address}
                                 onChange={handleChange}
-                                className="appearance-none  shadow-lg border-gray-500 border-2   rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none shadow-lg border-gray-500 border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 required
                             />
                         </div>
@@ -132,11 +138,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
                                 name="phoneNumber"
                                 value={formData.phoneNumber}
                                 onChange={handleChange}
-                                className="appearance-none  shadow-lg border-gray-500 border-2  border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none shadow-lg border-gray-500 border-2 border-t rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 required
                             />
                         </div>
-                        <Link href='/TableFood'
+                        <Link href='/FoodTable'
                             type="submit"
                             className="bg-green-700 rounded-1xl hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
