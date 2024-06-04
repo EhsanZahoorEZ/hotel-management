@@ -53,7 +53,7 @@ const Search: FC<Props> = ({
         </div>
 
         <div className='w-full md:1/3 lg:w-auto mb-4 md:mb-0'>
-          <label className='block text-sm font-medium mb-2 text-black  '>
+          {/* <label className='block text-sm font-medium mb-2 text-black  '>
             Search
           </label>
           <input
@@ -63,16 +63,16 @@ const Search: FC<Props> = ({
             className='w-full px-4 py-3 rounded leading-tight dark:bg-black focus:outline-none placeholder:text-black dark:placeholder:text-white'
             value={searchQuery}
             onChange={handleSearchQueryChange}
-          />
+          /> */}
         </div>
 
-        <button
+        {/* <button
           className='btn-primary font-serif border-4 border-gray-300 border-t border-r'
           type='button'
           onClick={handleFilterClick}
         >
           Search
-        </button>
+        </button> */}
       </div>
     </section>
   );
